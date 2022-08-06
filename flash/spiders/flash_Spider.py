@@ -26,22 +26,7 @@ class FlashSpiderSpider(scrapy.Spider):
     allowed_domains = ['quizlet.com']
     PROXIES = load_proxies()
     AGENTS = load_agents()
-    # custom_settings = {
-    #     "PLAYWRIGHT_LAUNCH_OPTIONS": {
-    #         "proxy": {
-    #             "server": f"http://{random.choice(PROXIES).split(':')[0]}:{random.choice(PROXIES).split(':')[1]}",
-    #             "username": f"{random.choice(PROXIES).split(':')[2]}",
-    #             "password": f"{random.choice(PROXIES).split(':')[3]}".strip("\n"),
-    #         },
-            
-    #     },
-    #     "PLAYWRIGHT_CONTEXTS":{
-    #         1:{
-    #             "user_agent":f"{random.choice(AGENTS)}".strip("\n"),
-    #         }
-    #     }
-    # }
-
+    
     def start_requests(self):
         urls = [f"https://quizlet.com/subjects/arts-and-humanities/history-flashcards?page={i}" for i in range (1,667)]
         # url = 'https://httpbin.org/ip'
