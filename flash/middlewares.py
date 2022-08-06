@@ -102,9 +102,4 @@ class FlashDownloaderMiddleware:
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
-# class BrightProxyMiddleware(object):
-#     def process_request(self,request,spider):
-#         # request.meta['proxy'] = "83.149.70.159:13012"
-#         request.meta['proxy'] = "http://zproxy.lum-superproxy.io:22225"
-#         # request.headers['Proxy-Authorization'] = basic_auth_header("ahmad402","qwertyuiop")
-#         # request.headers['Proxy-Authorization'] = basic_auth_header("aiqdrzze-rotate","hxnz2gxenp8g")
+# 
